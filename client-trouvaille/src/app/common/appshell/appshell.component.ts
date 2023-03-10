@@ -19,7 +19,7 @@ export class AppshellComponent {
     this.routerEvent$ = this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
           this.currentRoute = event.url;
-            // console.log(event);
+            // console.log(event);salman
       }});
 
     }
