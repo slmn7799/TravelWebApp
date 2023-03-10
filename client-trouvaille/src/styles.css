@@ -1,0 +1,133 @@
+/* You can add global styles to this file, and also import other style files */
+
+html{
+    font-size: 16px;
+    /* background-color: aqua; */
+}
+body{
+    font-family: 'Source Sans Pro','Roboto', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+.bg-color-white{
+    background-color: #ffffff;
+}
+
+.bg-light{
+    background-color: #f3f4f5;;
+}
+
+.title-color{
+    color: #2c365d;
+}
+
+.font-oblique{
+    font-style: oblique;
+}
+
+.Source-Sans-Pro-900{
+    font-weight: 900;
+}
+
+.Source-Sans-Pro-700{
+    font-weight: 700;
+}
+
+.Source-Sans-Pro-600{
+    font-weight: 600;
+}
+
+.f-12{
+    font-size: 12px;
+}
+
+.f-14{
+    font-size: 14px;
+}
+
+.f-16{
+    font-size: 1rem;
+}
+
+.f-24{
+    font-size: 1.5rem;
+}
+
+.font-24{
+    font-size: 1.5rem;
+}
+
+.f-19-22{
+    font-size: 1.2rem;
+}
+
+.f-36{
+    font-size: 2.25rem;
+}
+
+.f-24-28{
+    font-size: 1.5rem;
+}
+
+.f-20{
+    font-size: 20px;
+}
+
+.f-16-18{
+    font-size: 1rem;
+}
+
+.f-12-14{
+    font-size: 0.75rem;
+}
+
+.f-12-16{
+    font-size: 0.75rem;
+}
+
+.f-18-24{
+    font-size: 1.125rem;
+}
+
+.line-height-title{
+    line-height: 1;
+    letter-spacing: -.03em
+}
+
+.line-height-sub-content{
+    letter-spacing: -.03em;
+    line-height: 1.2;
+}
+
+@media (min-width: 576px){
+    .f-16-18{
+        font-size: 1.125rem;
+    }
+    .f-18-24{
+        font-size: 1.5rem;
+    }
+    .f-12-16{
+        font-size: 1rem;
+    }
+    .f-12-14{
+        font-size: 0.875rem;
+    }
+}
+
+@media (min-width: 990px){
+    .f-24{
+        font-size: 2.25rem;
+    }
+    .f-16{
+        font-size: 1.5rem;
+    }
+    .f-24-28{
+        font-size: 1.75rem;
+    }
+    .f-19-22{
+        font-size: 1.4rem;
+    }
+    
+}

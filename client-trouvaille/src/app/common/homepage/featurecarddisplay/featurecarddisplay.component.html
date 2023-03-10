@@ -1,0 +1,30 @@
+<!-- <div class="container-fluid p-3 m-3">
+    <div class="row justify-content-center">
+        <div class="col-12 img-box text-center">
+            <img [src]="imgUrl" alt="" class="w-100">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center">
+            <p class="Source-Sans-Pro-700 f-22 line-height-title title-color">{{ cardTitle }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center">
+            <p class="Source-Sans-Pro-600 f-16 line-height sub-text-color">{{ cardSubContent }}</p>
+        </div>
+    </div>
+</div> -->
+<div class="container-fluid container-flex justify-content-center align-items-center  text-md-center text-start px-md-3 mb-4">
+    <div appAnimation AfterCss="fade-up-visible" thresholdV="0.3" class="col-5 col-md-12 fade-up-img">
+        <img [src]="imgUrl" alt="" class="img-w-50-75 w-100 mb-md-3 fade-up-img fade-up-visible">
+    </div>
+    <div class="container-flex-col px-3 px-md-0 bg-color-white z-index-5">
+        <div class="">
+            <h3 class="Source-Sans-Pro-700 f-19-22 line-height-title title-color mb-3">{{ cardTitle }}</h3>
+        </div>
+        <div class="">
+            <p class="Source-Sans-Pro-400 font-16  sub-text-color mb-3">{{ cardSubContent }}</p>
+        </div>
+    </div>
+</div>

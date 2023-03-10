@@ -1,0 +1,59 @@
+.logo-color{
+    color: #f75940;
+}
+
+.bg-color-trans{
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.bg-color-white{
+    background-color: #ffffff;
+    transition: all 0.2s ease-in-out;
+}
+
+.below-link{
+    border-color: transparent;
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+}
+
+.below-link-white{
+    border-color: #ffffff;
+}
+
+.active-nav-link:hover, .active {
+    color: #686666;
+    border-color: #f75940;
+    /* border-width: 0px 0px 1px 0px; */
+    /* border-style: solid; */
+    transition: 0.3s ease;
+}
+
+.padding-bottom{
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.trans-btn{
+    background-color: transparent;
+    border-radius: 25%;
+    transition: 0.3s ease;
+}
+
+.trans-btn:hover{
+    background-color: #f3f4f5;
+    transition: 0.3s ease;
+}
+
+.z-index-header{
+    z-index: 99;
+}
+
+.font-24{
+    font-size: 24px;
+}

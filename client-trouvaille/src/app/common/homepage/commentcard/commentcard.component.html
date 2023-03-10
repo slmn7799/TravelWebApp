@@ -1,0 +1,19 @@
+<div class="card p-3 m-2 position-relative" style="width: 18rem;">
+    <div class="card-body ">
+      <div class="card-title icon-size mb-3 title-color">
+        <span class="fa fa-star m-1"></span>
+        <span class="fa fa-star m-1"></span>
+        <span class="fa fa-star m-1"></span>
+        <span class="fa fa-star m-1"></span>
+        <span class="fa fa-star m-1"></span>
+      </div>
+      <h6 class="card-subtitle mb-2 text-muted line-height">{{ commentContent }}</h6>
+      <div class="mt-4 d-flex align-items-center position-absolute bottom-0 py-4">
+        <img [src]="profileImg" alt="" class="profile-img" id="profile">
+        <div class="d-flex flex-column">
+          <span class="card-text margin-left">{{ profileName }}</span>
+        <p class="mb-0 pb-0 blog" *ngIf="blogLink ? true : false" ><a [href]="blogLinkHref" target="_blank" class="card-link">{{ blogLink }}</a></p>
+        </div>
+      </div>
+    </div>
+  </div>

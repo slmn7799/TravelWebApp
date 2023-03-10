@@ -1,0 +1,60 @@
+<!-- <div *ngIf="scrollEffect; else trans_nav" > -->
+  <nav class="container navbar navbar-expand-lg navbar-light pb-0 z-index-header" [ngClass]="!scrollEffect ? 'bg-color-trans':'bg-color-white'">
+    <div class="container-fluid sticky">
+      <a class="navbar-brand Source-Sans-Pro-900 logo-color font-24 pt-0" routerLink="/">trOUvAIllE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 Source-Sans-Pro-700" [ngClass]="!scrollEffect ? 'd-none':''">
+          <li class="nav-item f-14">
+            <a class="nav-link  below-link active-nav-link padding-bottom" (click)="homeClick()" aria-current="page" routerLink="/home" routerLinkActive="active">Home</a>
+          </li>
+          <li class="nav-item f-14">
+            <a class="nav-link  below-link active-nav-link padding-bottom" aria-current="page" routerLink="/guides" routerLinkActive="active">Travel guides</a>
+          </li>
+          <li class="nav-item f-14">
+            <a class="nav-link  below-link active-nav-link padding-bottom" aria-current="page" routerLinkActive="active">Hotels</a>
+          </li>
+        </ul>
+        <ul class="d-flex navbar-nav mb-2 mb-lg-0 Source-Sans-Pro-700">
+            <li class="nav-item f-14">
+                <a class="nav-link  below-link  padding-bottom" [ngClass]="scrollEffect ? 'below-link-white active-nav-link':'trans-btn'" aria-current="page" href="#">Log in</a>
+            </li>
+            <li class="nav-item f-14">
+                <a class="nav-link  below-link  padding-bottom" [ngClass]="scrollEffect ? 'below-link-white active-nav-link':'trans-btn'" aria-current="page" href="#">Sign up</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- </div> -->
+    <!-- <nav class="container navbar navbar-expand-lg navbar-light pb-0 bg-color-trans">
+      <div class="container-fluid sticky">
+        <a class="navbar-brand Source-Sans-Pro-900 logo-color font-24 pt-0" routerLink="/">trOUvAIllE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 Source-Sans-Pro-700">
+            <li class="nav-item f-14">
+              <a class="nav-link active below-link active-nav-link padding-bottom" aria-current="page" routerLink="/home">Home</a>
+            </li>
+            <li class="nav-item f-14">
+              <a class="nav-link active below-link active-nav-link padding-bottom" aria-current="page" routerLink="/guides">Travel guides</a>
+            </li>
+            <li class="nav-item f-14">
+              <a class="nav-link active below-link active-nav-link padding-bottom" aria-current="page" routerLink="/">Hotels</a>
+            </li>
+          </ul>
+          <ul class="d-flex navbar-nav mb-2 mb-lg-0 Source-Sans-Pro-700">
+              <li class="nav-item f-14">
+                  <a class="nav-link active padding-bottom" aria-current="page" href="#">Log in</a>
+              </li>
+              <li class="nav-item f-14">
+                  <a class="nav-link active padding-bottom" aria-current="page" href="#">Sign up</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav> -->

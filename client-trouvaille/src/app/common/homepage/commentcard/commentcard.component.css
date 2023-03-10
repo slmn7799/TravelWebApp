@@ -1,0 +1,45 @@
+.card{
+    border-radius: 20px;
+    background-color: #f3f4f5;
+    border: none;
+    height: 300px
+}
+
+.icon-size{
+    font-size: 16px;
+}
+
+.profile-img{
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    margin-right: 9px;
+}
+
+.margin-left{
+    margin-left: 9px;
+}
+
+.line-height{
+    line-height: inherit;
+}
+
+.blog{
+    padding-left: 9px;
+}
+
+#profile{
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+#profile:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 0.3s ease;
+}
+
+.card-text{
+    cursor: pointer;
+}

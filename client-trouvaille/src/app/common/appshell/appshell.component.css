@@ -1,0 +1,39 @@
+.below-border{
+    border-color: #e7e5e5;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+}
+
+.sticky-before{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.bg-color-trans{
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+    /* z-index: -99; */
+}
+
+.bg-color-white{
+    background-color: #ffffff;
+    transition: all 0.2s ease-in-out;
+    /* z-index: 200; */
+}
+
+.header-z-index{
+    z-index: 200;
+}
+
+.main-margin-top{
+    margin-top: 5em;
+}

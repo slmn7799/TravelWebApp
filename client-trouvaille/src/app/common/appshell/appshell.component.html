@@ -1,0 +1,21 @@
+<div class="">
+    <!-- <div class=" header-z-index bg-color-white sticky">
+        <div class="below-border" >
+            <app-header></app-header>
+        </div>
+    </div> -->
+    <div class=" header-z-index" [ngClass]="!scrollEffect ? 'bg-color-trans sticky-before':'bg-color-white sticky'">
+        <div class="" [ngClass]="!scrollEffect ? '':'below-border'">
+            <app-header></app-header>
+        </div>
+    </div>
+    <main role="main">
+        <!-- <app-homepage></app-homepage> -->
+        <div class="main-margin-top">
+            <router-outlet></router-outlet>
+        </div>
+    </main>
+    <div class="bg-light">
+        <app-footer></app-footer>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+.container-flex-col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-planning{
+    background-color: #f75940;
+    color: #ffffff;
+    border-radius: 29px;
+    margin: 0 0 0.5rem 0;
+}
+
+.btn-get-app{
+    color: #f75940;
+    background-color: #feefed;
+    border-radius: 29px;
+}
+
+.btn-get-hover:hover{
+    background-color: #f5a79e;
+    transition: 0.3s ease;
+}
+
+.btn-planning-hover:hover{
+    background-color: #bb4431;
+    transition: 0.3s ease;
+}
+
+@media (min-width: 576px){
+    .container-flex-col{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .btn-planning{
+        margin: 0 0.25rem 0 0;
+    }
+    .btn-get-app{
+        margin: 0 0 0 0.25rem;
+    }
+}
