@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tourvaille-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tourvaille
+  template:
+    metadata:
+      labels:
+        app: tourvaille
+    spec:
+      containers:
+        - name: tourvaille
+          image: salmanskh/tourvaille
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tourvaille-srv
+spec:
+  selector:
+    app: tourvaille
+  ports:
+  - name: tourvaille
+    port: 80
+    targetPort: 80
+
