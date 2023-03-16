@@ -28,5 +28,5 @@ spec:
   ports:
   - name: tourvaille
     port: 3000
-    targetPort: 3000
+    targetPort: 80
 
