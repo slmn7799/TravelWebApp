@@ -5,7 +5,7 @@ FROM node:latest as build
 WORKDIR /usr/local/app
 
 # Copy the package.json and package-lock.json files to the working directory
-COPY package.json package-lock.json /usr/local/app/
+COPY package*.json /usr/local/app/
 
 # Install the dependencies
 RUN npm install
@@ -14,19 +14,16 @@ RUN npm install
 COPY . /usr/local/app/
 
 # Build the Angular app for production
-RUN npm run build
+RUN npm run build --prod
 
-# Use an official Nginx runtime as a parent image
+# Use a lightweight web server for serving the Angular app
 FROM nginx:latest
 
-# Verify that the dist/tourvaille directory exists
-RUN test -d /usr/share/nginx/html/dist/tourvaille || exit 1
-
-# Copy the built Angular app to Nginx web server
-COPY --from=build /usr/local/app/dist/tourvaille /usr/share/nginx/html
+# Copy the built Angular app from the previous stage to the Nginx server's web root directory
+COPY --from=build /usr/local/app/dist/trouvaille /usr/share/nginx/html
 
 # Expose port 80 for the web server
 EXPOSE 80
 
-# Start the Nginx web server
+# Start the web server
 CMD ["nginx", "-g", "daemon off;"]
