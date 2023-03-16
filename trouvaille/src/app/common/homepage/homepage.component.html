@@ -1,0 +1,165 @@
+<div class="background-container">
+    <img appOpacityscroll src="../../../assets/sylwia-bartyzel-eU4pipU_8HA-unsplash (1).jpg" class="width-relative background-img">
+    <img src="https://wanderlog.com/assets/LandingPageHero__foreground.png" class="w-100 position-absolute triangle-img">
+    <!-- <img src="https://wanderlog.com/assets/LandingPageHero__foreground.png" class="w-100 position-absolute"> -->
+</div>
+<div class="container container-flex-col margin-padding">
+    <div appOpacityscroll class="left-container">
+        <h1 class="Source-Sans-Pro-700 f-36 line-height-title title-text title-color text-center text-md-start">You'll never travel without our trip planner again</h1>
+        <p class="Source-Sans-Pro-400 f-24-28 sub-content line-height-sub-content text-center text-md-start mb-lg-5 mb-md-3">Build, organize, and map your itineraries in a free travel app designed for vacations & road trips</p>
+        <div class="container-flex-btn justify-content-center justify-content-md-start align-items-center">
+            <button class="btn btn-planning py-3 Source-Sans-Pro-700 btn-planning-hover px-4" (click)="startPlanning()">Start planning</button>
+            <button class="btn btn-get-app py-3 Source-Sans-Pro-700 btn-get-hover px-4">Get the app</button>
+        </div>
+    </div>
+    <div class="right col-lg-7">
+        <!-- <h1 class="Source-Sans-Pro-900 f-32 line-height-title title-color text-center">You'll never travel without our trip planner again</h1> -->
+    </div>
+</div>
+<div class="bg-color-white">
+    <div class="container padding-y-200">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8 col-md-8 text-center padding-map-left">
+                <div class="position-relative w-75">
+                    <img  src="https://wanderlog.com/assets/LandingPageMapAnimation__base.png" class="w-100 position-relative base">
+                    <img appAnimation AfterCss="map-up" thresholdV="0.2" src="https://wanderlog.com/assets/LandingPageMapAnimation__map.png" class="w-75 map position-absolute" #map>
+                    <img appAnimation AfterCss="marker-up" delay="900" src="https://wanderlog.com/assets/LandingPageMapAnimation__marker.png" class="position-absolute marker-1 opacity-transform">
+                    <img appAnimation AfterCss="marker-up" delay="900" src="https://wanderlog.com/assets/LandingPageMapAnimation__marker.png" class="position-absolute marker-2 opacity-transform">
+                    <img appAnimation AfterCss="marker-up" delay="900" src="https://wanderlog.com/assets/LandingPageMapAnimation__marker.png" class="position-absolute marker-3 opacity-transform">
+                    <img appAnimation AfterCss="marker-up" delay="900" src="https://wanderlog.com/assets/LandingPageMapAnimation__marker.png" class="position-absolute marker-4 opacity-transform">
+                    <img appAnimation AfterCss="marker-up" delay="900" src="https://wanderlog.com/assets/LandingPageMapAnimation__marker.png" class="position-absolute marker-5 opacity-transform">
+                    <img appAnimation AfterCss="marker-up" delay="900" src="https://wanderlog.com/assets/LandingPageMapAnimation__marker.png" class="position-absolute marker-6">
+                    <img appAnimation AfterCss="map-up" src="https://wanderlog.com/assets/LandingPageMapAnimation__item0.png" class="position-absolute item-0 opacity-transform">
+                    <img appAnimation AfterCss="map-up" src="https://wanderlog.com/assets/LandingPageMapAnimation__item1.png" class="position-absolute item-1 opacity-transform">
+                    <img appAnimation AfterCss="map-up" src="https://wanderlog.com/assets/LandingPageMapAnimation__item0.png" class="position-absolute item-2 opacity-transform">
+                    <img appAnimation AfterCss="map-up" src="https://wanderlog.com/assets/LandingPageMapAnimation__item1.png" class="position-absolute item-3 opacity-transform">
+                    <img appAnimation AfterCss="map-up" src="https://wanderlog.com/assets/LandingPageMapAnimation__item2.png" class="position-absolute item-4 opacity-transform">
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 col-md-4 mt-4 mt-lg-0 text-md-start text-center">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="Source-Sans-Pro-700 f-24 line-height-title title-color">Your itinerary and your map in one view</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="Source-Sans-Pro-400 f-16 sub-content line-height line-height-sub-content">No more switching between different apps, tabs, and tools to keep track of your travel plans.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-color-white">
+    <div class="container padding-48-200">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="Source-Sans-Pro-900 f-24 line-height title-color">What travelers are raving about</p>
+            </div>
+        </div>
+        <div class="horizontal-container position-relative p-3">
+            <div class="horizontal-scroll">
+                <button class="btn-scroll position-absolute btn-left" id="btn-scroll-left" appLeftscroll><i class="fa fa-chevron-left"></i></button>
+                <button class="btn-scroll position-absolute btn-right" id="btn-scroll-right" appRightscroll><i class="fa fa-chevron-right"></i></button>
+                <div class="horizontal-row">
+                    <app-commentcard class="item" commentContent="So much easier to visualize and plan a road trip to my favourite rock climbing destinations and explore the area around." profileImg="https://itin-strapi.sfo2.digitaloceanspaces.com/Couple_Travel_The_World_8cd99ff8e1.jpg" profileName="Lydia Yang, Founder" blogLink="LydiaScapes Adventure Blog" blogLinkHref="https://www.lydiascapes.com/what-is-rock-climbing/"></app-commentcard>
+                    <app-commentcard class="item" commentContent="Planning your trip by having all the attractions already plugged into a map makes trip planning so much easier." profileImg="https://itin-strapi.sfo2.digitaloceanspaces.com/Inside_The_Travel_Lab_d1ecc97dc7.jpg" profileName="Nadia, Travel Blogger" blogLink="Couple Travel The World" blogLinkHref="https://coupletraveltheworld.com/"></app-commentcard>
+                    <app-commentcard class="item" commentContent="Yesterday I walked my kids through the vacation timeline that I've built so far and their excitement levels went way up!" profileImg="https://itin-strapi.sfo2.digitaloceanspaces.com/Kelvin_S_09c480af0c.jpg" profileName="Kelvin S."></app-commentcard>
+                    <app-commentcard class="item" commentContent="I'm a rather extensive planner when I take trips so this was great. I liked how it auto-filled all of my travel information from my email account." profileImg="https://itin-strapi.sfo2.digitaloceanspaces.com/Josh_M_1fe508b124.jpg" profileName="Josh M."></app-commentcard>
+                    <app-commentcard class="item" commentContent="It left me speechless that I can add places to my trip and they get automatically populated with a featured pic and description from the web." profileImg="https://itin-strapi.sfo2.digitaloceanspaces.com/Jorge_D_ca03cc6416.jpg" profileName="Jorge D."></app-commentcard>
+                    <app-commentcard class="item" commentContent="I really like how user friendly it is and the auto-save. I also enjoy being able to look at trips that others have planned for inspiration."  profileImg="https://itin-strapi.sfo2.digitaloceanspaces.com/Kelvin_S_09c480af0c.jpg" profileName="Dasha S."></app-commentcard>
+                    <app-commentcard class="item" commentContent="Very intuitive and simple while still providing a bunch of features, like photos on the destinations, descriptions and suggestions for nearby places to visit." profileImg="https://itin-strapi.sfo2.digitaloceanspaces.com/Jorge_D_ca03cc6416.jpg" profileName="Camilla F."></app-commentcard>
+                    <app-commentcard class="item" commentContent="I’ve been dreaming of a tool like this for years and finally it’s here! Wanderlog is my new go-to tool after decades of professional travel." profileImg="https://itin-strapi.sfo2.digitaloceanspaces.com/Couple_Travel_The_World_8cd99ff8e1.jpg" profileName="Abigail King, Founder" blogLink="Inside the Travel Lab" blogLinkHref="https://www.insidethetravellab.com/the-50-best-travel-websites/"></app-commentcard>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-color-white">
+    <div class="container padding-48-200">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="Source-Sans-Pro-700 f-24 line-height-title title-color mb-5">Features to replace all your other tools</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <app-featurecarddisplay imgUrl="https://wanderlog.com/assets/MainFeatureTiles__addPlaces.png" cardTitle="Add places from guides with 1 click" cardSubContent="We crawled the web so you don’t have to. Easily save mentioned places."></app-featurecarddisplay>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <app-featurecarddisplay imgUrl="https://wanderlog.com/assets/MainFeatureTiles__collaborate.png" cardTitle="Collaborate with friends in real time" cardSubContent="Plan along with your friends with live syncing and collaborative editing."></app-featurecarddisplay>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <app-featurecarddisplay imgUrl="https://wanderlog.com/assets/MainFeatureTiles__import.png" cardTitle="Import flight and hotel reservations" cardSubContent="Connect or forward your emails to get them magically added into your trip plan."></app-featurecarddisplay>
+            </div>
+        <!-- </div>
+        <div class="row"> -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <app-featurecarddisplay imgUrl="https://wanderlog.com/assets/MainFeatureTiles__optimizeRoute.png" cardTitle="Optimize your route" cardSubContent="Perfect for road trips and saving $$$ on gas! Get the best route auto-rearranged."></app-featurecarddisplay>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <app-featurecarddisplay imgUrl="https://wanderlog.com/assets/MainFeatureTiles__recommendations.png" cardTitle="Get personalized suggestions" cardSubContent="Find the best places to visit with smart recommendations based on your itinerary."></app-featurecarddisplay>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <app-featurecarddisplay imgUrl="https://wanderlog.com/assets/MainFeatureTiles__export.png" cardTitle="Export your places to Google Maps" cardSubContent="Synced automatically, for when plans change."></app-featurecarddisplay>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-color-white">
+    <div class="container padding-99">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="Source-Sans-Pro-700 f-24 line-height-title title-color">Discover your next favorite destination</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 text-center">
+                <p class="Source-Sans-Pro-400 px-3 f-16 sub-content line-height-sub-content">Get inspired from guides around the world — with expert tips and recommendations from the Wanderlog community.<span class="link-color"> See all <span class="Source-Sans-Pro-600 cursor-p">trOUvAIllE</span> travel guides.</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="bg-blue">
+        <div class="container position-relative box w-100 p-0">
+            <div class="horizontal-scroll">
+                <!-- <button class="btn-scroll position-absolute btn-left-guide" id="btn-scroll-left" appLeftscroll><i class="fa fa-chevron-left"></i></button>
+                <button class="btn-scroll position-absolute btn-right-guide" id="btn-scroll-right" appRightscroll><i class="fa fa-chevron-right"></i></button> -->
+                <div appAnimation AfterCss="card-container-visible" thresholdV="0.2" delay="0" class="card-container-unv horizontal-row position-absolute box-row w-100">
+                    <app-tourguidecard class="item" imgSrc="https://itin-dev.sfo2.cdn.digitaloceanspaces.com/freeImage/nVcKOvDayw1nqzNpujgTkW87DxRG9Al6" titleCaption="Paris 5 Day Tourist Itinerary +Recommendations" profileImgSrc="https://itin-dev.sfo2.cdn.digitaloceanspaces.com/profilePicture/yJXthcKFKxoGskp7" profileName="Elisa Li" viewStats="2349" likeStats="565"></app-tourguidecard>
+                    <app-tourguidecard class="item" imgSrc="https://itin-dev.sfo2.cdn.digitaloceanspaces.com/freeImage/R4TG9xUW9gCrkPqHMvU1yDALYVs0oWYg" titleCaption="An American's Guide to Paris" profileImgSrc="https://itin-dev.sfo2.cdn.digitaloceanspaces.com/profilePicture/U29JKqCgE7tJVym4" profileName="Oliver Manhein" viewStats="8764" likeStats="900"></app-tourguidecard>
+                    <app-tourguidecard class="item" imgSrc="https://itin-dev.sfo2.cdn.digitaloceanspaces.com/freeImage/5ifB1Den6uMKNKWZ0seJUaPgtcTkCm69" titleCaption="Explore Paris + Easy Day Trips" profileImgSrc="https://itin-dev.sfo2.cdn.digitaloceanspaces.com/profilePicture/hV8pRhazrhvXVUYy" profileName="Lizzy S" viewStats="987" likeStats="200"></app-tourguidecard>
+                    <app-tourguidecard class="item" imgSrc="https://itin-dev.sfo2.cdn.digitaloceanspaces.com/freeImage/yc9S9dewxn2yHLCWFUlgVGFgAGe5vegs" titleCaption="🦔 A week in New York City, USA" profileImgSrc="https://itin-dev.sfo2.cdn.digitaloceanspaces.com/profilePicture/nF7U5qg5OsEDokEX" profileName="Allan Watt" viewStats="874" likeStats="398"></app-tourguidecard>
+                    <app-tourguidecard class="item" imgSrc="https://itin-dev.sfo2.cdn.digitaloceanspaces.com/freeImage/8DqUXyVtDEGSDY41Lbb0K0MrZU9BOp15" titleCaption="New York City Guide" profileImgSrc="https://itin-dev.sfo2.cdn.digitaloceanspaces.com/profilePicture/hV8pRhazrhvXVUYy" profileName="Lizzy S" viewStats="9865" likeStats="5986"></app-tourguidecard>
+                    <app-tourguidecard class="item" imgSrc="https://itin-dev.sfo2.cdn.digitaloceanspaces.com/freeImage/I6xixIB42Rb7Qz3pHTkkoSXjkn6Iu5Hr" titleCaption="New York City Guide" profileImgSrc="https://itin-dev.sfo2.cdn.digitaloceanspaces.com/profilePicture/9peVO9DvckqZFqpa" profileName="Maya Bolaky" viewStats="90532" likeStats="9874"></app-tourguidecard>
+                    <app-tourguidecard class="item" imgSrc="https://itin-dev.sfo2.cdn.digitaloceanspaces.com/freeImage/WJnULhrJ6Z3M51zmgHC7mmPYt6SNqreR" titleCaption="🇺🇲 Hiking Trails in Denver 🥾" profileImgSrc="https://itin-dev.sfo2.cdn.digitaloceanspaces.com/profilePicture/1tbpHWsYlcWa3FKl" profileName="Janet Wang" viewStats="342" likeStats="20"></app-tourguidecard>
+                    <app-tourguidecard class="item" imgSrc="https://itin-dev.sfo2.cdn.digitaloceanspaces.com/freeImage/vBp7Mk5Z6v1vHppx4av5ODqrWG4jkK9z" titleCaption="🇺🇲 Explore Denver's Whiskey Scene 🥃" profileImgSrc="https://itin-dev.sfo2.cdn.digitaloceanspaces.com/profilePicture/1tbpHWsYlcWa3FKl" profileName="Janet Wang" viewStats="5687" likeStats="598"></app-tourguidecard>
+                </div>
+            </div>
+            <div class="row position-absolute position-bottom w-100">
+                <div class="col-12 text-center">
+                    <p class="Source-Sans-Pro-400 f-16-18 white-text line-height-sub-content">Have tips of your own? Write a guide to share with other travelers like you!</p>
+                </div>
+                <div class="col-12 text-center">
+                    <button class="guide-btn Source-Sans-Pro-700 f-14">write your own guide</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="feature-card">
+    <app-featurecard></app-featurecard>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 px-5 below-border">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="start-planning-card bg-color-white">
+    <app-startplanningcard></app-startplanningcard>
+</div>
+<div class="bg-light info-template-card">
+    <app-infotemplate></app-infotemplate>
+</div>
+
