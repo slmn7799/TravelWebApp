@@ -19,7 +19,7 @@
         </ul>
         <ul class="d-flex navbar-nav mb-2 mb-lg-0 Source-Sans-Pro-700">
             <li class="nav-item f-14">
-                <a class="nav-link  below-link  padding-bottom" [ngClass]="scrollEffect ? 'below-link-white active-nav-link':'trans-btn'" aria-current="page" href="#">Log in</a>
+                <a class="nav-link  below-link  padding-bottom" [ngClass]="scrollEffect ? 'below-link-white active-nav-link':'trans-btn'" aria-current="page" (click)="openLoginModal()" >Log in</a>
             </li>
             <li class="nav-item f-14">
                 <a class="nav-link  below-link  padding-bottom" [ngClass]="scrollEffect ? 'below-link-white active-nav-link':'trans-btn'" aria-current="page" href="#">Sign up</a>
