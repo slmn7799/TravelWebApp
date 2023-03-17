@@ -21,6 +21,9 @@ import { OpacityscrollDirective } from './common/homepage/directives/opacityscro
 import { AnimationDirective } from './common/homepage/directives/animation.directive';
 import { CreateplanComponent } from './plan/createplan/createplan.component';
 import { GuidesdashboardComponent } from './tour-guides/guidesdashboard/guidesdashboard.component';
+import { LoginComponent } from './common/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -41,12 +44,15 @@ import { GuidesdashboardComponent } from './tour-guides/guidesdashboard/guidesda
     OpacityscrollDirective,
     AnimationDirective,
     CreateplanComponent,
-    GuidesdashboardComponent
+    GuidesdashboardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SwiperModule
+    SwiperModule,
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

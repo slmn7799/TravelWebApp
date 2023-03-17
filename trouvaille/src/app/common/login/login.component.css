@@ -1,0 +1,15 @@
+.login-btn{
+    border-radius: 19px;
+}
+
+.modal-body{
+    position: relative;
+}
+
+.cancel-icon{
+    color: #6c757d;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+}

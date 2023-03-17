@@ -1,5 +1,7 @@
 import { Component, HostListener, OnInit} from '@angular/core';
 import { Router, NavigationEnd, Event  } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +14,8 @@ export class HeaderComponent implements OnInit {
   scrollEffect: boolean = false;
   routerEvent$: any;
 
-  constructor(private router: Router){
+  constructor(private router: Router,
+              private modalService: NgbModal){
 
     this.routerEvent$ = this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
@@ -25,6 +28,11 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     
+  }
+
+  openLoginModal() {
+    console.log("login btn clicked");
+    const modalRef = this.modalService.open(LoginComponent, { centered: true });
   }
 
   homeClick(){
