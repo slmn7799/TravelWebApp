@@ -21,9 +21,10 @@ import { OpacityscrollDirective } from './common/homepage/directives/opacityscro
 import { AnimationDirective } from './common/homepage/directives/animation.directive';
 import { CreateplanComponent } from './plan/createplan/createplan.component';
 import { GuidesdashboardComponent } from './tour-guides/guidesdashboard/guidesdashboard.component';
-import { LoginComponent } from './common/login/login.component';
+import { LoginComponent } from './common/header/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppRoutingModule,
     SwiperModule,
     ReactiveFormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
