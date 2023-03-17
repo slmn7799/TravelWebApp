@@ -2,6 +2,11 @@
     color: #f75940;
 }
 
+::ng-deep .modal-content{
+    border-radius: 30px;
+    /* max-width: 450px; */
+}
+
 .bg-color-trans{
     background-color: transparent;
     transition: all 0.2s ease-in-out;

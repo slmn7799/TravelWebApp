@@ -1,0 +1,117 @@
+.login-btn{
+    border-radius: 100px;
+    height: 56px;
+    font-size: 1em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-body{
+    position: relative;
+}
+
+.cancel-icon{
+    color: #6c757d;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.cancel-icon:hover{
+    color: #a5aaad;
+}
+
+.login-title{
+    color: #212529;
+    font-size: 24px;
+    margin-bottom: 48px;
+}
+
+.facebook-icon{
+    align-items: start;
+    font-size: 1.5em;
+    position: absolute;
+    top: 29%;
+    left: 7%;
+}
+
+.google-icon{
+    font-size: 1.5em;
+    position: absolute;
+    top: 29%;
+    left: 7%;
+}
+
+.apple-icon{
+    font-size: 1.5em;
+    position: absolute;
+    top: 29%;
+    left: 7%;
+}
+
+.facebook-btn{
+    background-color: #3f52e3;
+    color: #ffffff;
+    min-height: 32px;
+    min-width: 56px;
+}
+
+.facebook-btn:hover{
+    background-color: #1d2985;
+}
+
+.google-btn {
+    border-color: #dee2e6;
+    border-style: solid;
+    border-width: 1px;
+    color: #495057;
+    min-height: 32px;
+    min-width: 56px;
+}
+.google-btn:hover{
+    background-color: #f3f4f5;
+}
+.apple-btn{
+    border-color: #dee2e6;
+    border-style: solid;
+    border-width: 1px;
+    color: #495057;
+    min-height: 32px;
+    min-width: 56px;
+}
+.apple-btn:hover{
+    background-color: #f3f4f5;
+}
+
+.form-field{
+    min-height: 32px;
+    min-width: 56px;
+    height: 56px;
+}
+.or{
+    color:#495057;
+}
+
+.forget-btn{
+    background-color: #ffffff;
+    border-style: none;
+    font-size: 12px;
+    color: #495057;
+}
+
+.forget-btn:hover{
+    color:#26282b
+}
+
+.main-login-btn{
+    background-color: #ffffff;
+    border-style: none;
+    color: #495057;
+    font-size: 14px;
+}
+
+.main-login-btn:hover{
+    color: #3f52e3;
+}

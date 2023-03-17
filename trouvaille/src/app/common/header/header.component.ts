@@ -1,7 +1,7 @@
 import { Component, HostListener, OnInit} from '@angular/core';
 import { Router, NavigationEnd, Event  } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { LoginComponent } from '../login/login.component';
+import { LoginComponent } from './login/login.component';
 
 @Component({
   selector: 'app-header',
@@ -31,8 +31,13 @@ export class HeaderComponent implements OnInit {
   }
 
   openLoginModal() {
-    console.log("login btn clicked");
     const modalRef = this.modalService.open(LoginComponent, { centered: true });
+    modalRef.componentInstance.data = "login";
+  }
+
+  openSignupModal() {
+    const modalRef = this.modalService.open(LoginComponent, { centered: true });
+    modalRef.componentInstance.data = "";
   }
 
   homeClick(){

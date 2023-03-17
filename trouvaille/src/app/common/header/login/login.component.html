@@ -1,0 +1,53 @@
+<div class="container p-5 modal-body">
+  <i class="fa fa-times cancel-icon" aria-hidden="true" (click)="activeModal.dismiss()"></i>
+  
+    <h2 class="text-center Source-Sans-Pro-700 login-title">{{login? "Log in to Wanderlog":"Sign up to Wanderlog"}}</h2>
+    <div class="row align-items-center">
+        <div class="text-center">
+          
+            <div class="facebook-btn mb-2 login-btn " type="button">
+              <i class="fa fa-facebook-official facebook-icon" aria-hidden="true"></i><span class="Source-Sans-Pro-700 login-subbtn">{{login?"Log in":"Signup"}} with Facebook</span>
+            </div>
+            <div class="google-btn mb-2 login-btn" type="button">
+              <i class="fa fa-google google-icon" aria-hidden="true"></i><span class="Source-Sans-Pro-700 login-subbtn">{{login?"Log in":"Signup"}} with Google</span>
+            </div>
+            <div *ngIf="login" class="apple-btn mb-2 login-btn" type="button">
+              <i class="fa fa-apple apple-icon" aria-hidden="true"></i><span class="Source-Sans-Pro-700 login-subbtn">{{login?"Log in":"Signup"}} with Apple</span>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mb-2">
+      <hr class="d-inline">
+      <Span class="text-center or Source-Sans-Pro-700">or</Span>
+      <hr class="d-inline">
+    </div>
+    <div class="row text-center">
+      <div class=""></div>
+      <div class="">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="">
+          <div class="form-group pb-3">
+            <input type="email" formControlName="email" class="form-control form-field Source-Sans-Pro-600" id="email" placeholder="Email" required=true>
+          </div>
+          <div class="form-group">
+            <input type="password" formControlName="password" class="form-control form-field Source-Sans-Pro-600" id="password" placeholder="Password" required="true">
+            
+          </div>
+          <div *ngIf="login" class="">
+            <button class="Source-Sans-Pro-700 forget-btn mb-3 mt-1">Forgot password</button>
+          </div>
+          <div *ngIf="loginForm?.invalid && (loginForm?.dirty)" class="text-danger forget-btn">
+            <div>Email and Password must be valid.</div>
+          </div>
+          <button type="submit" class=" Source-Sans-Pro-700 main-login-btn mb-4" [disabled]=false>{{login? "Log in":"Sign up with email"}}</button>
+
+          
+          <div class="">
+            <button class=" Source-Sans-Pro-700 main-login-btn" (click)="toggleForm()"><span class="Source-Sans-Pro-600">{{login? "Don't have an account yet? ":"Already have an account? "}}</span>{{login?"Sign up":"Log in"}}</button>
+          </div>
+        </form>
+      </div>
+      
+    </div>
+          
+        
+</div>
