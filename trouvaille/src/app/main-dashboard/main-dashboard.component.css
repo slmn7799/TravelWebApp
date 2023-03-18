@@ -1,0 +1,62 @@
+.hotel-search{
+    background-color: #e2daef;
+    border-radius: 16px;
+    position: relative;
+}
+
+.hotel-search-img-content{
+    position: relative;
+}
+
+.purple-img{
+    border-radius: 16px;
+    /* position: absolute; */
+    right: 0;
+}
+
+.hotel-booking-img{
+    position:absolute;
+    z-index: 2;
+    left: 0%;
+    
+}
+
+.hotel-booking-title{
+    font-size: 2.25rem;
+    color: #212529;
+}
+
+.hotel-booking-sub-text{
+    font-size: 1.5rem;
+    color: #6c757d;
+}
+
+.darker-btn{
+    background-color: #212529;
+    color: #fff;
+    margin-right: 8px;
+}
+.darker-btn:hover{
+    background-color: #15171a;
+}
+
+.light-btn{
+    background-color: transparent;
+    color: #212529;
+}
+
+.light-btn:hover{
+    color: #2b2f33;
+}
+
+.search-hotel-btn{
+    border-color: #212529;
+    border-width: 1px;
+    border-radius: 100px;
+    height: 56px;
+    min-width: 56px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-style: solid;
+}

@@ -25,6 +25,7 @@ import { LoginComponent } from './common/header/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
+import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { HttpClientModule } from '@angular/common/http';
     AnimationDirective,
     CreateplanComponent,
     GuidesdashboardComponent,
-    LoginComponent
+    LoginComponent,
+    MainDashboardComponent
   ],
   imports: [
     BrowserModule,

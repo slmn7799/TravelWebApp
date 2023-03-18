@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,8 @@ export class LoginComponent implements OnInit{
 
   constructor(private fb: FormBuilder,
               public activeModal: NgbActiveModal,
-              private authService: AuthService) {
+              private authService: AuthService,
+              private router: Router) {
 
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -38,14 +40,17 @@ export class LoginComponent implements OnInit{
   onSubmit() {
     // Handle login logic here
     console.log(this.loginForm.value);
-    // const jsonData = JSON.stringify(this.loginForm);
     const credentials = {
       email: this.email?.value,
       password: this.password?.value
     };
     if(this.login){
       this.authService.login(credentials).subscribe(
-        response => console.log(response),
+        (response) => {
+          console.log(response);
+          this.router.navigate(["/dashboard"]);
+          this.activeModal.dismiss();
+          },
         error => console.error(error)
       );
     } else{
