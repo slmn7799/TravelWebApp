@@ -60,3 +60,112 @@
     font-weight: bold;
     border-style: solid;
 }
+
+.new-plan-trip{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.your-trip{
+    background-color: #f3f4f5;
+    border-radius: 8px;
+    width: 100%;
+    margin-right: 16px;
+}
+
+.your-trip-title{
+    color: #212529;
+    font-size: 1.5rem;
+}
+
+.your-trip-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.your-trip-btn{
+    background-color: #e9ecef;
+    border-color: #e9ecef;
+    border-width: 1px;
+    border-radius: 24px;
+    height: 40px;
+    min-width: 40px;
+    padding: 7px 16px 7px 12px;
+    cursor: pointer;
+    border-style: solid;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.your-trip-btn:hover{
+    background-color: #dadddf;
+}
+
+.your-trip-subcontent{
+    color: #212529;
+    font-size: 1rem;
+}
+
+.plan-new-link{
+    color: #f75940;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.plan-new-link:hover{
+    color: #f18b7b;
+}
+
+
+.your-guide{
+    background-color: #f3f4f5;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.your-guide-title{
+    color: #212529;
+    font-size: 1.5rem;
+}
+
+.your-guide-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.your-guide-btn{
+    background-color: #e9ecef;
+    border-color: #e9ecef;
+    border-width: 1px;
+    border-radius: 24px;
+    height: 40px;
+    min-width: 40px;
+    padding: 7px 16px 7px 12px;
+    cursor: pointer;
+    border-style: solid;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.your-guide-btn:hover{
+    background-color: #dadddf;
+}
+
+.guide-new-link{
+    color: #f75940;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.guide-new-link:hover{
+    color: #f18b7b;
+}
+
+.your-guide-subcontent{
+    color: #212529;
+    font-size: 1rem;
+}
