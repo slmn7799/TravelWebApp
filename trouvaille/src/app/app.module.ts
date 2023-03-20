@@ -26,6 +26,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
+import { ExploreCardComponent } from './main-dashboard/explore-card/explore-card.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { MainDashboardComponent } from './main-dashboard/main-dashboard.componen
     CreateplanComponent,
     GuidesdashboardComponent,
     LoginComponent,
-    MainDashboardComponent
+    MainDashboardComponent,
+    ExploreCardComponent
   ],
   imports: [
     BrowserModule,

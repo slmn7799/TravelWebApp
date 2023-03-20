@@ -1,0 +1,25 @@
+<div class="card" style="width: 22rem;">
+    <div class="">
+        <img [src]="imgSrc" class="card-img-top" alt="...">
+    </div>
+    <div class="card-body">
+      <h5 class="card-title Source-Sans-Pro-400">{{cardTitle}}</h5>
+      <p class="card-text Source-Sans-Pro-400">{{desc}}</p>
+      <div class="profile-details">
+        <div class="profile-main-details">
+            <img class="profile-img" [src]="profileImg" alt="">
+            <span class="profile-name Source-Sans-Pro-400">{{profileName}}</span>
+        </div>
+        <div class="profile-stats">
+            <div class="likes d-inline">
+                <i style="font-size:16px" class="fa">&#xf08a;</i>
+                <span class="Source-Sans-Pro-400 profile-name"> {{likes}}</span>
+            </div>
+            <div class="views d-inline">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                <span class="Source-Sans-Pro-400 profile-name"> {{views}}</span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>

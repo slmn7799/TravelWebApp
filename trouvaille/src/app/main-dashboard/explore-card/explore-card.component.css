@@ -1,0 +1,67 @@
+.card{
+    border-radius: 9px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border-style: solid;
+}
+.card:hover .card-img-top{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+.card-text{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    color: #6c757d;
+    font-size: 16px;
+    margin-top: 0.35rem;
+}
+.card-body{
+    background-color: #ffffff;
+}
+.card-title{
+    color: #212529;
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 0.7rem;
+}
+.card-img-top{
+    transition: 0.3s ease;
+    height: 240px;
+    width: 360px;
+    object-fit: cover;
+}
+.card-img-top:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+.profile-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.4rem;
+}
+.likes{
+    margin-right: 16px;
+}
+.profile-img{
+    width: 30px;
+    height:30px;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+.profile-name{
+    color: #212529;
+    font-weight: 500;
+}
+.main-img{
+    object-fit: cover;
+}
