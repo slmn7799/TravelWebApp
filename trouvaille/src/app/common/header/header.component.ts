@@ -46,7 +46,7 @@ export class HeaderComponent implements OnInit {
 
   @HostListener("document:scroll")
   scrollEffectFunction(){
-    if((this.currentRoute === "/home") || (this.currentRoute === "/")){
+    if((this.currentRoute === "/home") || (this.currentRoute === "/") || (this.currentRoute === "/dashboard")){
       if((document.body.scrollTop > 40) || (document.documentElement.scrollTop > 40)){
         this.scrollEffect = true;
       } else {
