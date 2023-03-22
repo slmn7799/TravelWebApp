@@ -55,7 +55,11 @@ export class LoginComponent implements OnInit{
       );
     } else{
       this.authService.signup(credentials).subscribe(
-        response => console.log(response),
+        (response) => {
+          console.log(response);
+          this.router.navigate(["/dashboard"]);
+          this.activeModal.dismiss();
+          },
         error => console.error(error)
       );
     }
