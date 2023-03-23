@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit} from '@angular/core';
 import { Router, NavigationEnd, Event  } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AuthService } from './auth.service';
 import { LoginComponent } from './login/login.component';
 
 @Component({
@@ -13,9 +14,12 @@ export class HeaderComponent implements OnInit {
   currentRoute: string = "";
   scrollEffect: boolean = false;
   routerEvent$: any;
+  isLoggedIn: any;
+  homeLink: any = false;
 
   constructor(private router: Router,
-              private modalService: NgbModal){
+              private modalService: NgbModal,
+              private authService: AuthService){
 
     this.routerEvent$ = this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
@@ -27,6 +31,16 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    
+    (this.currentRoute === "/home" || this.currentRoute === "/dashboard") ? (this.homeLink = true):(this.homeLink = false);
+
+    this.authService.getIsLoggedIn().subscribe(
+      (res)=>{
+        this.isLoggedIn = res;
+        console.log(this.isLoggedIn);
+      }
+    );
     
   }
 
@@ -40,8 +54,23 @@ export class HeaderComponent implements OnInit {
     modalRef.componentInstance.data = "";
   }
 
+  signOut(){
+    const credentials: any = null;
+    this.authService.signOut(credentials).subscribe(
+      (response) => {
+        console.log(response);
+        this.authService.setIsLoggedIn(false);
+        this.router.navigate(["/home"]);
+        },
+      error => console.error(error)
+    );
+  }
+
   homeClick(){
     // this.scrollEffect = false;
+    this.isLoggedIn ? this.router.navigate(["/dashboard"]): this.router.navigate(["/home"]);
+    console.log("homeclick", this.isLoggedIn);
+    // this.isLoggedIn ? (this.homeLink = "/dashboard"): (this.homeLink = "/home")
   }
 
   @HostListener("document:scroll")
@@ -54,7 +83,7 @@ export class HeaderComponent implements OnInit {
       }
     }
 
-    (this.currentRoute === "/plan/create") && (this.scrollEffect = true);
+    (this.currentRoute === "/plan/create" || this.currentRoute === "/dashboard") && (this.scrollEffect = true);
   }
 
 }

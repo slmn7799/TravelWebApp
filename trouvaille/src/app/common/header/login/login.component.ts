@@ -48,6 +48,7 @@ export class LoginComponent implements OnInit{
       this.authService.login(credentials).subscribe(
         (response) => {
           console.log(response);
+          this.authService.setIsLoggedIn(true);
           this.router.navigate(["/dashboard"]);
           this.activeModal.dismiss();
           },
@@ -57,6 +58,7 @@ export class LoginComponent implements OnInit{
       this.authService.signup(credentials).subscribe(
         (response) => {
           console.log(response);
+          this.authService.setIsLoggedIn(true);
           this.router.navigate(["/dashboard"]);
           this.activeModal.dismiss();
           },
