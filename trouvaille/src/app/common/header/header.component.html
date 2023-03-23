@@ -8,7 +8,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 Source-Sans-Pro-700" [ngClass]="!scrollEffect ? 'd-none':''">
           <li class="nav-item f-14">
-            <a class="nav-link  below-link active-nav-link padding-bottom" (click)="homeClick()" aria-current="page" routerLink="/home" routerLinkActive="active">Home</a>
+            <span class="nav-link cursor-p  below-link active-nav-link padding-bottom" (click)="homeClick()" aria-current="page" routerLinkActive="active">Home</span>
           </li>
           <li class="nav-item f-14">
             <a class="nav-link  below-link active-nav-link padding-bottom" aria-current="page" routerLink="/guides" routerLinkActive="active">Travel guides</a>
@@ -17,12 +17,26 @@
             <a class="nav-link cursor-p  below-link active-nav-link padding-bottom" aria-current="page" routerLinkActive="active">Hotels</a>
           </li>
         </ul>
-        <ul class="d-flex navbar-nav mb-2 mb-lg-0 Source-Sans-Pro-700">
-            <li class="nav-item f-14">
+        <ul class="d-flex navbar-nav mb-2 mb-lg-0 Source-Sans-Pro-700 space-between">
+            <li class="nav-item f-14" *ngIf="!isLoggedIn">
                 <a class="nav-link cursor-p  below-link  padding-bottom" [ngClass]="scrollEffect ? 'below-link-white active-nav-link':'trans-btn'" aria-current="page" (click)="openLoginModal()" >Log in</a>
             </li>
-            <li class="nav-item f-14">
+            <li class="nav-item f-14" *ngIf="!isLoggedIn">
                 <a class="nav-link cursor-p  below-link  padding-bottom" [ngClass]="scrollEffect ? 'below-link-white active-nav-link':'trans-btn'" aria-current="page" (click)="openSignupModal()">Sign up</a>
+            </li>
+            <li class="nav-item f-14 search-bar-li" *ngIf="isLoggedIn">
+              <i class="fa fa-search" aria-hidden="true"></i>
+              <input class="search-bar Source-Sans-Pro-400" type="text" placeholder="Enter place or user"/>
+            </li>
+            <li class="nav-item f-14 bell-icon cursor-p" *ngIf="isLoggedIn">
+              <i class='fa fa-bell' ></i>
+            </li>
+            <li class="nav-item f-14 dropdown" *ngIf="isLoggedIn">
+              <img href="javascript:void(0)" class="profile-pic-header cursor-p dropbtn" src="../../../assets/alex-azabache-rwCjbjaK-Zs-unsplash.jpg" alt="">
+              <div class="dropdown-content">
+                <a class="Source-Sans-Pro-400 drop-a-link"><i class="fa fa-user" aria-hidden="true"></i><span>My profile</span></a>
+                <a class="Source-Sans-Pro-400 drop-a-link" (click)="signOut()"><i class="fa fa-sign-out" aria-hidden="true"></i><span>Log out</span></a>
+              </div>
             </li>
         </ul>
       </div>

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,13 @@ export class AuthService {
   private currentUserUrl = 'http://localhost:3000/api/users/currentuser';
   private signOutUrl = 'http://localhost:3000/api/users/signout';
 
-  constructor(private http: HttpClient) { }
+  private isLoggedInSubject = new BehaviorSubject<boolean>(false);
+  isLoggedIn$ = this.isLoggedInSubject.asObservable();
+
+  constructor(private http: HttpClient) { 
+
+    this.isLoggedIn$ = new BehaviorSubject<boolean>(false);
+  }
 
   login(credentials: any): Observable<any> {
     return this.http.post<any>(this.loginUrl, credentials);
@@ -28,5 +34,13 @@ export class AuthService {
 
   signOut(credentials: any): Observable<any> {
     return this.http.post<any>(this.signOutUrl, credentials);
+  }
+
+  setIsLoggedIn(value: boolean): void {
+    this.isLoggedInSubject.next(value);
+  }
+
+  getIsLoggedIn(): BehaviorSubject<boolean> {
+    return this.isLoggedInSubject;
   }
 }

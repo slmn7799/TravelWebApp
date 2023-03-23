@@ -36,7 +36,7 @@ export class AppshellComponent {
       }
     }
     
-    (this.currentRoute === "/plan/create") && (this.scrollEffect = true);
+    (this.currentRoute === "/plan/create" || this.currentRoute === "/dashboard") && (this.scrollEffect = true);
   }
 
 }
